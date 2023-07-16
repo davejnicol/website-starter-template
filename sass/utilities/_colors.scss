@@ -1,4 +1,3 @@
-// Use an @each loop to create utility classes for text and background colors based on the colors in abstracts
 @use "../abstracts" as *;
 
 @each $color, $shade-map in $colors {
