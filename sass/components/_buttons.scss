@@ -1,32 +1,37 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .button {
-    border: 0;
-    cursor: pointer;
-    display: inline-flex;
-    font-weight: $fw-700;
-    line-height: 1;
-    padding: 1.125em 2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 275ms ease;
+	display: inline-flex;
+	justify-content: center;
+	border: $button-border;
+	border-radius: $button-border-radius;
+	cursor: pointer;
+	font-family: $button-font-family;
+	font-size: $button-font-size;
+	font-weight: $button-font-weight;
+	line-height: 1;
+	padding: $button-padding-default;
+	text-decoration: $button-text-decoration;
+	text-transform: $button-text-transform;
+	transition: 275ms ease;
 
-    &[data-type="accent"] {
-        background-color: clr(primary, 400);
-        color: clr(neutral, 900);
-    }
+	&[data-type="primary"] {
+		background-color: $button-primary-background;
+		color: $button-primary-color;
 
-    &[data-type="outline"] {
-        --outline-size: 5px;
-        
-        background: transparent;
-        color: clr(neutral, 100);
-        outline: var(--outline-size) solid clr(neutral, 100);
-        outline-offset: calc(var(--outline-size) * -1);
-    }
+		&:is(:hover, :focus) {
+			background-color: $button-primary-background-hover;
+			color: $button-primary-color-hover;
+		}
+	}
 
-    &:is(:hover, :focus) {
-        background: clr(neutral, 100);
-        color: clr(neutral, 900);
-    }
+	&[data-type="accent"] {
+		background-color: $button-accent-background;
+		color: $button-accent-color;
+
+		&:is(:hover, :focus) {
+			background-color: $button-accent-background-hover;
+			color: $button-accent-color-hover;
+		}
+	}
 }
