@@ -1,3 +1,5 @@
-.uppercase { 
-    text-transform: uppercase;
+.#{$prefix} {
+	&uppercase {
+		text-transform: uppercase;
+	}
 }

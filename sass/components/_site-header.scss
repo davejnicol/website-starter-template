@@ -1,18 +1,20 @@
 @use "../abstracts/" as *;
 
-.site-header {
-	background-color: $site-header-background-color;
-	color: $site-header-color;
-	padding: $site-header-padding;
+.#{$prefix} {
+	&site-header {
+		background-color: $site-header-background-color;
+		color: $site-header-color;
+		padding: $site-header-padding;
 
-	&__inner {
-		display: flex;
-		gap: $size-4;
-		align-items: $site-header-alignment;
-		justify-content: $site-header-jusitifcation-small-screens;
+		&__inner {
+			display: flex;
+			gap: $size-4;
+			align-items: $site-header-alignment;
+			justify-content: $site-header-jusitifcation-small-screens;
 
-		@include mq(medium) {
-			justify-content: $site-header-jusitifcation-large-screens;
+			@include mq(medium) {
+				justify-content: $site-header-jusitifcation-large-screens;
+			}
 		}
 	}
 }

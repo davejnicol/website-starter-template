@@ -1,17 +1,19 @@
 @use "../abstracts/" as *;
 
-.card {
-	background-color: $card-background-default;
-	color: $card-color-default;
-	border-radius: $card-border-radius;
-	box-shadow: $card-shadow;
-	display: grid;
-	font-family: $card-font-family;
-	gap: $card-flow-spacing;
-	line-height: $card-line-height;
-	padding: $card-body-padding;
+.#{$prefix} {
+	&card {
+		background-color: $card-background-default;
+		color: $card-color-default;
+		border-radius: $card-border-radius;
+		box-shadow: $card-shadow;
+		display: grid;
+		font-family: $card-font-family;
+		gap: $card-flow-spacing;
+		line-height: $card-line-height;
+		padding: $card-body-padding;
 
-	&__heading {
-		@include heading($card-heading-font-size, $card-heading-color-default);
+		&__heading {
+			@include heading($card-heading-font-size, $card-heading-color-default);
+		}
 	}
 }
