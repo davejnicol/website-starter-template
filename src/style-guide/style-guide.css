@@ -1,0 +1,55 @@
+.sg-body {
+	background-color: #fff;
+	color: #111314;
+}
+.sg-nav {
+	position: fixed;
+	left: 0px;
+	top: 0%;
+	right: auto;
+	bottom: 0px;
+	border-right: 1px solid #dddbdb;
+}
+.sg-nav-container {
+	background-color: #f0f1f2;
+	height: 100vh;
+	width: 240px;
+}
+@media screen and (min-width: 1280px) {
+	.sg-nav-container {
+		width: 280px;
+	}
+}
+.sg-brand {
+	color: #111314;
+	position: relative;
+	text-decoration: none;
+}
+.sg-brand::before {
+	content: "";
+	border: 12px solid #0fa5e1;
+	border-radius: 24px 8px 0 60px;
+	box-sizing: content-box;
+	margin-right: 0.25rem;
+	width: 12px;
+	aspect-ratio: 1/1;
+	transform: rotate(-45deg);
+}
+.sg-nav-header {
+	border-bottom: 1px solid #dddbdb;
+	color: #b4b6b8;
+	padding-bottom: 8px;
+}
+.sg-menu {
+}
+.sg-menu-link {
+	color: #4c5458;
+	display: block;
+	padding: 6px 12px;
+	text-decoration: none;
+	transition: background-color 200ms ease, color 200ms ease;
+}
+.sg-menu-current {
+	background-color: #e1e5e7;
+	font-weight: bold;
+}
