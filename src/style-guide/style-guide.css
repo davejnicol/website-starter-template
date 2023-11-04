@@ -136,9 +136,6 @@ html {
 		width: auto;
 		height: auto;
 	}
-	/* .sg-nav[data-collapse="medium"] .sg-menu-wrapper {
-		display: block;
-	} */
 	.sg-nav[data-collapse="medium"] .sg-hamburger {
 		display: block;
 	}
@@ -185,7 +182,6 @@ html {
 		transform: rotate(45deg);
 		top: 0;
 	}
-
 	.sg-menu-wrapper {
 		position: absolute;
 		right: 0%;
@@ -210,7 +206,6 @@ html {
 			opacity: 1;
 		}
 	}
-
 	.sg-nav-header:first-child {
 		margin-top: 0;
 	}
