@@ -74,6 +74,9 @@ html {
 .sg-hamburger {
 	display: none;
 }
+.sg-nav-container input[type="checkbox"] {
+	display: none;
+}
 .sg-content {
 	display: flex;
 	max-width: 100%;
@@ -112,6 +115,9 @@ html {
 	}
 }
 @media screen and (max-width: 991px) {
+	html {
+		scroll-padding-top: var(--size-12);
+	}
 	.sg-nav {
 		position: sticky;
 		left: 0px;
@@ -130,9 +136,9 @@ html {
 		width: auto;
 		height: auto;
 	}
-	.sg-nav[data-collapse="medium"] .sg-menu-wrapper {
-		display: none;
-	}
+	/* .sg-nav[data-collapse="medium"] .sg-menu-wrapper {
+		display: block;
+	} */
 	.sg-nav[data-collapse="medium"] .sg-hamburger {
 		display: block;
 	}
@@ -155,7 +161,7 @@ html {
 		display: block;
 		height: 100%;
 		width: 100%;
-		transition: all 0.2s ease-out;
+		transition: all 250ms ease-out;
 	}
 	.sg-hamburger-line::before {
 		top: 7px;
@@ -163,32 +169,46 @@ html {
 	.sg-hamburger-line::after {
 		top: -7px;
 	}
-	.sg-hamburger.sg--open {
+	#sg-show-menu:checked + .sg-hamburger {
 		border-radius: 50%;
 		background-color: var(--clr-blue-light);
 		color: var(--clr-blue);
 	}
-	.sg-hamburger.sg--open .sg-hamburger-line {
+	#sg-show-menu:checked + .sg-hamburger .sg-hamburger-line {
 		background: transparent;
 	}
-	.sg-hamburger.sg--open .sg-hamburger-line::before {
+	#sg-show-menu:checked + .sg-hamburger .sg-hamburger-line::before {
 		transform: rotate(-45deg);
 		top: 0;
 	}
-	.sg-hamburger.sg--open .sg-hamburger-line::after {
+	#sg-show-menu:checked + .sg-hamburger .sg-hamburger-line::after {
 		transform: rotate(45deg);
 		top: 0;
 	}
 
 	.sg-menu-wrapper {
 		position: absolute;
-		left: 0%;
-		top: 80px;
+		right: 0%;
+		top: var(--size-12);
 		z-index: 500;
-		display: block;
+		display: none;
 		padding: var(--size-5);
 		background-color: var(--clr-neutral-100);
-		width: 100%;
+		min-width: 70vw;
+	}
+	#sg-show-menu:checked ~ .sg-menu-wrapper {
+		display: grid;
+		grid-gap: var(--size-5);
+		grid-template-columns: repeat(2, 1fr);
+		animation: menushow 600ms ease-in;
+	}
+	@keyframes menushow {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 
 	.sg-nav-header:first-child {
