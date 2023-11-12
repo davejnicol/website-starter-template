@@ -1,32 +1,21 @@
 * {
-	--clr-white: #fff;
-	--clr-neutral-100: #f0f1f2;
-	--clr-neutral-200: #e1e5e7;
-	--clr-neutral-300: #dddbdb;
-	--clr-neutral-500: #b4b6b8;
-	--clr-neutral-700: #4c5458;
-	--clr-black: #111314;
-	--clr-blue-light: #d0e8ff;
-	--clr-blue: #0fa5e1;
-
-	--size-1: 0.5rem;
-	--size-2: 0.75rem;
+	--size-2: 0.5rem;
+	--size-3: 0.75rem;
 	--size-5: 1.25rem;
 	--size-6: 1.5rem;
-	--size-7: 1.875rem;
-	--size-9: 2.375rem;
-	--size-10: 2.5rem;
-	--size-11: 3.75rem;
+	--size-7: 1.75rem;
+	--size-9: 2.5rem;
+	--size-11: 4rem;
 	--size-12: 5rem;
-	--size-15: 15rem;
+	--size-16: 15rem;
 	--size-17: 17rem;
 }
 html {
 	scroll-behavior: smooth;
 }
 .sg-body {
-	background-color: var(--clr-white);
-	color: var(--clr-black);
+	background-color: var(--neutral-000);
+	color: var(--neutral-1000);
 }
 .sg-nav {
 	position: fixed;
@@ -36,39 +25,39 @@ html {
 	bottom: 0px;
 }
 .sg-nav-container {
-	background-color: var(--clr-neutral-100);
+	background-color: var(--neutral-100);
 	height: 100vh;
-	width: var(--size-15);
+	width: var(--size-16);
 }
 .sg-brand {
-	color: var(--clr-black);
+	color: var(--neutral-1000);
 	position: relative;
 	text-decoration: none;
 }
 .sg-brand::before {
 	content: "";
-	border: var(--size-2) solid var(--clr-blue);
-	border-radius: var(--size-6) var(--size-1) 0 var(--size-11);
+	border: var(--size-3) solid var(--primary-400);
+	border-radius: var(--size-6) var(--size-2) 0 var(--size-11);
 	box-sizing: content-box;
-	margin-right: calc(var(--size-1) / 2);
-	width: var(--size-2);
+	margin-right: calc(var(--size-2) / 2);
+	width: var(--size-3);
 	aspect-ratio: 1/1;
 	transform: rotate(-45deg);
 }
 .sg-nav-header {
-	border-bottom: 1px solid var(--clr-neutral-300);
-	color: var(--clr-neutral-500);
-	padding-bottom: var(--size-1);
+	border-bottom: 1px solid var(--neutral-300);
+	color: var(--neutral-500);
+	padding-bottom: var(--size-2);
 }
 .sg-menu-link {
-	color: var(--clr-neutral-700);
+	color: var(--neutral-700);
 	display: block;
-	padding: calc(var(--size-1) * 0.8) var(--size-2);
+	padding: calc(var(--size-2) * 0.8) var(--size-3);
 	text-decoration: none;
 	transition: background-color 200ms ease, color 200ms ease;
 }
 .sg-menu-link[data-link="active"] {
-	background-color: var(--clr-neutral-200);
+	background-color: var(--neutral-200);
 	font-weight: bold;
 }
 .sg-hamburger {
@@ -80,7 +69,7 @@ html {
 .sg-content {
 	display: flex;
 	max-width: 100%;
-	margin-left: var(--size-15);
+	margin-left: var(--size-16);
 	flex-direction: column;
 }
 .sg-section {
@@ -92,15 +81,14 @@ html {
 }
 .sg-section p {
 	line-height: 1.6em;
-	margin-bottom: var(--size-2);
 }
 .sg-section-hero {
-	background-color: var(--clr-blue);
-	color: var(--clr-white);
+	background-color: var(--primary-600);
+	color: var(--neutral-000);
 }
 .sg-section-header {
-	background-color: var(--clr-neutral-200);
-	color: var(--clr-neutral-700);
+	background-color: var(--neutral-100);
+	color: var(--neutral-700);
 	font-size: var(--size-5);
 	font-weight: 600;
 	padding-block: var(--size-7);
@@ -127,7 +115,7 @@ html {
 		overflow: visible;
 		width: 100%;
 		height: var(--size-12);
-		background-color: var(--clr-neutral-100);
+		background-color: var(--neutral-100);
 	}
 	.sg-nav-container {
 		display: flex;
@@ -141,11 +129,11 @@ html {
 	}
 	.sg-hamburger {
 		cursor: pointer;
-		padding: var(--size-5) var(--size-2);
+		padding: var(--size-5) var(--size-3);
 	}
 	.sg-hamburger-line {
 		position: relative;
-		background: var(--clr-black);
+		background: var(--neutral-1000);
 		display: block;
 		height: 3px;
 		width: 26px;
@@ -154,7 +142,7 @@ html {
 	.sg-hamburger-line::after {
 		position: absolute;
 		content: "";
-		background: var(--clr-black);
+		background: var(--neutral-1000);
 		display: block;
 		height: 100%;
 		width: 100%;
@@ -168,8 +156,8 @@ html {
 	}
 	#sg-show-menu:checked + .sg-hamburger {
 		border-radius: 50%;
-		background-color: var(--clr-blue-light);
-		color: var(--clr-blue);
+		background-color: var(--primary-100);
+		color: var(--primary-400);
 	}
 	#sg-show-menu:checked + .sg-hamburger .sg-hamburger-line {
 		background: transparent;
@@ -189,7 +177,7 @@ html {
 		z-index: 500;
 		display: none;
 		padding: var(--size-5);
-		background-color: var(--clr-neutral-100);
+		background-color: var(--neutral-100);
 		min-width: 70vw;
 	}
 	#sg-show-menu:checked ~ .sg-menu-wrapper {
