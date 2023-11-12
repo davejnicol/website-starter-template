@@ -79,12 +79,12 @@ html {
 	font-size: var(--size-9);
 	font-weight: bold;
 }
-.sg-section p {
-	line-height: 1.6em;
-}
 .sg-section-hero {
 	background-color: var(--primary-600);
 	color: var(--neutral-000);
+}
+.sg-section-hero p {
+	line-height: 1.6em;
 }
 .sg-section-header {
 	background-color: var(--neutral-100);
@@ -92,6 +92,9 @@ html {
 	font-size: var(--size-5);
 	font-weight: 600;
 	padding-block: var(--size-7);
+}
+.sg-section-divider {
+	border-bottom: 1px solid var(--neutral-100);
 }
 
 @media screen and (min-width: 1280px) {
