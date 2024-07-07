@@ -10,9 +10,6 @@
 	--size-16: 15rem;
 	--size-17: 17rem;
 }
-html {
-	scroll-behavior: smooth;
-}
 .sg-body {
 	background-color: var(--neutral-000);
 	color: var(--neutral-1000);
