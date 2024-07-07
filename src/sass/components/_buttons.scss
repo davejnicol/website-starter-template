@@ -26,12 +26,34 @@
 			}
 		}
 
+		&[data-type="primary-outline"] {
+			box-shadow: inset 0 0 0 2px $button-primary-background;
+			color: $button-primary-background;
+
+			&:is(:hover, :focus) {
+				background-color: $button-primary-background;
+				box-shadow: none;
+				color: $button-primary-color;
+			}
+		}
+
 		&[data-type="accent"] {
 			background-color: $button-accent-background;
 			color: $button-accent-color;
 
 			&:is(:hover, :focus) {
 				background-color: $button-accent-background-hover;
+				color: $button-accent-color-hover;
+			}
+		}
+
+		&[data-type="accent-outline"] {
+			box-shadow: inset 0 0 0 2px $button-accent-background;
+			color: $button-accent-background;
+
+			&:is(:hover, :focus) {
+				background-color: $button-accent-background-hover;
+				box-shadow: none;
 				color: $button-accent-color-hover;
 			}
 		}
