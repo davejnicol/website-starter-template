@@ -201,15 +201,15 @@ $dark: (
 		"100": $-clr-deeppink-100,
 	),
 	"primary": (
-		"900": $-clr-skyblue-900,
-		"800": $-clr-skyblue-800,
-		"700": $-clr-skyblue-700,
-		"600": $-clr-skyblue-600,
+		"900": $-clr-skyblue-100,
+		"800": $-clr-skyblue-200,
+		"700": $-clr-skyblue-300,
+		"600": $-clr-skyblue-400,
 		"500": $-clr-skyblue-500,
-		"400": $-clr-skyblue-400,
-		"300": $-clr-skyblue-300,
-		"200": $-clr-skyblue-200,
-		"100": $-clr-skyblue-100,
+		"400": $-clr-skyblue-600,
+		"300": $-clr-skyblue-700,
+		"200": $-clr-skyblue-800,
+		"100": $-clr-skyblue-900,
 	),
 );
 
@@ -245,3 +245,42 @@ $color-primary-600: var(--primary-600);
 $color-primary-700: var(--primary-700);
 $color-primary-800: var(--primary-800);
 $color-primary-900: var(--primary-900);
+
+// Colors Map
+$colors: (
+	neutral: (
+		000: $color-neutral-000,
+		100: $color-neutral-100,
+		200: $color-neutral-200,
+		300: $color-neutral-300,
+		400: $color-neutral-400,
+		500: $color-neutral-500,
+		600: $color-neutral-600,
+		700: $color-neutral-700,
+		800: $color-neutral-800,
+		900: $color-neutral-900,
+		1000: $color-neutral-1000,
+	),
+	accent: (
+		100: $color-accent-100,
+		200: $color-accent-200,
+		300: $color-accent-300,
+		400: $color-accent-400,
+		500: $color-accent-500,
+		600: $color-accent-600,
+		700: $color-accent-700,
+		800: $color-accent-800,
+		900: $color-accent-900,
+	),
+	primary: (
+		100: $color-primary-100,
+		200: $color-primary-200,
+		300: $color-primary-300,
+		400: $color-primary-400,
+		500: $color-primary-500,
+		600: $color-primary-600,
+		700: $color-primary-700,
+		800: $color-primary-800,
+		900: $color-primary-900,
+	),
+);

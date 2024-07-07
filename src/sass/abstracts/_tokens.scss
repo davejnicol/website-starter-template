@@ -19,20 +19,15 @@ $letter-spacing-loose: 0;
 $border-radius-1: $size-2;
 $border-radius-2: $size-4;
 
-$box-shadow-1: 0px $size-2 $size-1 rgb(0, 0, 0, 0.012), 0px $size-6 $size-4 rgb(0, 0, 0, 0.018),
-	0px $size-13 $size-12 rgb(0, 0, 0, 0.03); // 6 5 22 18 100 80
+$box-shadow-1: 0px $size-2 $size-1 rgb(0, 0, 0, 0.012), 0px $size-6 $size-4 rgb(0, 0, 0, 0.018), 0px $size-13 $size-12 rgb(0, 0, 0, 0.03); // 6 5 22 18 100 80
 
-$box-shadow-2: 0px $size-2 $size-1 rgb(0, 0, 0, 0.016), 0px $size-6 $size-4 rgb(0, 0, 0, 0.024),
-	0px $size-13 $size-12 rgb(0, 0, 0, 0.04);
+$box-shadow-2: 0px $size-2 $size-1 rgb(0, 0, 0, 0.016), 0px $size-6 $size-4 rgb(0, 0, 0, 0.024), 0px $size-13 $size-12 rgb(0, 0, 0, 0.04);
 
-$box-shadow-3: 0px $size-2 $size-1 rgb(0, 0, 0, 0.02), 0px $size-6 $size-4 rgb(0, 0, 0, 0.03),
-	0px $size-13 $size-12 rgb(0, 0, 0, 0.05);
+$box-shadow-3: 0px $size-2 $size-1 rgb(0, 0, 0, 0.02), 0px $size-6 $size-4 rgb(0, 0, 0, 0.03), 0px $size-13 $size-12 rgb(0, 0, 0, 0.05);
 
-$box-shadow-4: 0px $size-2 $size-1 rgb(0, 0, 0, 0.03), 0px $size-6 $size-4 rgb(0, 0, 0, 0.042),
-	0px $size-13$size-12 rgb(0, 0, 0, 0.07);
+$box-shadow-4: 0px $size-2 $size-1 rgb(0, 0, 0, 0.03), 0px $size-6 $size-4 rgb(0, 0, 0, 0.042), 0px $size-13$size-12 rgb(0, 0, 0, 0.07);
 
-$box-shadow-5: 0px $size-2 $size-1 rgb(0, 0, 0, 0.04), 0px $size-6 $size-4 rgb(0, 0, 0, 0.06),
-	0px $size-13 $size-12 rgb(0, 0, 0, 0.1);
+$box-shadow-5: 0px $size-2 $size-1 rgb(0, 0, 0, 0.04), 0px $size-6 $size-4 rgb(0, 0, 0, 0.06), 0px $size-13 $size-12 rgb(0, 0, 0, 0.1);
 
 // Body
 $body-background-color: $color-background-default;

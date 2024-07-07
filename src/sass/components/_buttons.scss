@@ -2,6 +2,8 @@
 
 .#{$prefix} {
 	&button {
+		--outline-size: 0.2rem;
+
 		display: inline-flex;
 		justify-content: center;
 		border: $button-border;
@@ -27,7 +29,7 @@
 		}
 
 		&[data-type="primary-outline"] {
-			box-shadow: inset 0 0 0 2px $button-primary-background;
+			box-shadow: inset 0 0 0 var(--outline-size) $button-primary-background;
 			color: $button-primary-background;
 
 			&:is(:hover, :focus) {
@@ -48,13 +50,36 @@
 		}
 
 		&[data-type="accent-outline"] {
-			box-shadow: inset 0 0 0 2px $button-accent-background;
+			box-shadow: inset 0 0 0 var(--outline-size) $button-accent-background;
 			color: $button-accent-background;
 
 			&:is(:hover, :focus) {
 				background-color: $button-accent-background-hover;
 				box-shadow: none;
 				color: $button-accent-color-hover;
+			}
+		}
+
+		&[data-type="simple"] {
+			background-color: clr(neutral, 800);
+			color: $button-primary-color;
+
+			&:is(:hover, :focus) {
+				background-color: clr(neutral, 700);
+				color: $button-primary-color-hover;
+			}
+		}
+
+		&[data-type="simple-outline"] {
+			background: transparent;
+			color: clr(neutral, 800);
+			outline: var(--outline-size) solid clr(neutral, 800);
+			outline-offset: calc(var(--outline-size) * -1);
+
+			&:is(:hover, :focus) {
+				background: clr(neutral, 700);
+				color: clr(neutral, 100);
+				outline: none;
 			}
 		}
 	}
