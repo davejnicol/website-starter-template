@@ -15,5 +15,24 @@
 		&__heading {
 			@include heading($card-heading-font-size, $card-heading-color-default);
 		}
+
+		&[data-type="testimonial"] &__body {
+			position: relative;
+			isolation: isolate;
+
+			&::after {
+				--position: -10px;
+
+				position: absolute;
+				content: "\201C";
+				z-index: -1;
+				font-family: $card-font-family;
+				font-size: calc(var(--fs-900) * 4);
+				top: var(--position);
+				left: calc(var(--position) * 3);
+				transform: translate(0%, -24%);
+				opacity: 0.1;
+			}
+		}
 	}
 }
