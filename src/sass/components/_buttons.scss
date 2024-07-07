@@ -33,9 +33,9 @@
 			color: $button-primary-background;
 
 			&:is(:hover, :focus) {
-				background-color: $button-primary-background;
+				background-color: $button-primary-background-hover;
 				box-shadow: none;
-				color: $button-primary-color;
+				color: $button-primary-color-hover;
 			}
 		}
 
