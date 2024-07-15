@@ -117,6 +117,15 @@
 	transform: scale(1);
 	transition: transform 70ms linear, opacity 70ms linear;
 }
+#sg-theme-toggle #sg-toggle-circle {
+	transition: transform 500ms ease-out;
+}
+body[data-theme="light"] #sg-theme-toggle #sg-toggle-circle {
+	transform: translateX(-14%);
+}
+body[data-theme="dark"] #sg-theme-toggle #sg-toggle-circle {
+	transform: translateX(0);
+}
 /* Theme Toggle Styling Ends */
 
 .sg-content {
