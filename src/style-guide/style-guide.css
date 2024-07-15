@@ -266,3 +266,7 @@ body[data-theme="dark"] #sg-theme-toggle #sg-toggle-circle {
 		margin-left: 0px;
 	}
 }
+
+.sg-white-space span {
+	white-space: nowrap;
+}
