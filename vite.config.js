@@ -1,6 +1,6 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
-import htmlPurge from 'vite-plugin-purgecss'
+import postcssPresetEnv from "postcss-preset-env";
 
 export default defineConfig({
     root: resolve(__dirname, "src/"),
@@ -15,6 +15,6 @@ export default defineConfig({
       },
     },
     plugins: [
-        htmlPurge(),
+        postcssPresetEnv(),
     ]
 })
