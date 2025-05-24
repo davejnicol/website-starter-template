@@ -32,6 +32,7 @@
 	}
 }
 
+/* purgecss start ignore */
 body[data-theme="light"] {
 	@each $color, $shade-map in $light {
 		@each $shade, $value in $shade-map {
@@ -47,3 +48,4 @@ body[data-theme="dark"] {
 		}
 	}
 }
+/* purgecss end ignore */

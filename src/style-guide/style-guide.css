@@ -53,6 +53,7 @@
 	text-decoration: none;
 	transition: background-color 200ms ease, color 200ms ease;
 }
+/* purgecss ignore */
 .sg-menu-link[data-link="active"] {
 	background-color: var(--neutral-200);
 	font-weight: bold;
@@ -117,6 +118,7 @@
 	transform: scale(1);
 	transition: transform 70ms linear, opacity 70ms linear;
 }
+/* purgecss start ignore */
 #sg-theme-toggle #sg-toggle-circle {
 	transition: transform 500ms ease-out;
 }
@@ -126,6 +128,7 @@ body[data-theme="light"] #sg-theme-toggle #sg-toggle-circle {
 body[data-theme="dark"] #sg-theme-toggle #sg-toggle-circle {
 	transform: translateX(0);
 }
+/* purgecss end ignore */
 /* Theme Toggle Styling Ends */
 
 .sg-content {
