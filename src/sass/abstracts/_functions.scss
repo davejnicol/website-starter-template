@@ -20,7 +20,7 @@
 // 	} @else if $scheme == $active-theme {
 // 		$map: $active-theme;
 // 	} @else {
-// 		@error "unknown scheme";
+// 		@error "Unknown color scheme or theme";
 // 	}
 
 // 	@if map.has-key($map, $color, $shade) {
