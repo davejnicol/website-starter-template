@@ -9,7 +9,7 @@
 		width: fit-content;
 	}
 
-	&flex-group.mx-auto {
+	&flex-group.#{$prefix}mx-auto {
 		justify-content: center;
 	}
 }
