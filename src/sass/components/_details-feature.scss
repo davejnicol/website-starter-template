@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.#{$prefix} {
+	&details-feature-list {
+		font-size: $font-size-700;
+	}
+
+	&details-feature-title {
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-neutral-1000;
+		}
+
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: $size-3 $size-2;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: color-mix(in srgb, $color-neutral-600 10%, transparent);
+		}
+
+		& .#{$prefix}arrow {
+			transition: all 0.3s ease;
+			& svg {
+				fill: transparent;
+				stroke: $color-neutral-1000;
+				stroke-width: 3;
+
+				transform: rotate(90deg);
+
+				@include mq(medium) {
+					transform: rotate(0deg);
+				}
+			}
+		}
+
+		&.active {
+			font-weight: $font-weight-bold;
+			background: color-mix(in srgb, $color-primary-400 20%, transparent);
+
+			& .#{$prefix}arrow {
+				& svg {
+					fill: $color-primary-400;
+					stroke: $color-neutral-000;
+					stroke-width: 3;
+
+					& circle {
+						stroke: $color-primary-400;
+					}
+				}
+			}
+		}
+	}
+
+	&details-feature-item {
+		display: none;
+		animation: fadeIn 0.5s ease-in-out;
+
+		&.active {
+			display: block;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+}

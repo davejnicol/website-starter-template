@@ -17,3 +17,107 @@
 		}
 	}
 }
+
+/* Header Mobile Hamburger Menu to Desktop Menu */
+/* purgecss start ignore */
+.#{$prefix} {
+	&nav-container {
+		position: relative;
+	}
+	&site-header:has(&nav-container) {
+		& input[type="checkbox"] {
+			display: none;
+		}
+
+		& .#{$prefix}hamburger {
+			display: block;
+			cursor: pointer;
+			padding: $size-5 $size-3;
+
+			&-line {
+				position: relative;
+				background: $color-neutral-900;
+				display: block;
+				height: 3px;
+				width: 26px;
+
+				&::before,
+				&::after {
+					position: absolute;
+					content: "";
+					background: $color-neutral-900;
+					display: block;
+					height: 100%;
+					width: 100%;
+					transition: all 250ms ease-out;
+				}
+				&::before {
+					top: 7px;
+				}
+				&::after {
+					top: -7px;
+				}
+			}
+			@include mq(medium) {
+				display: none;
+			}
+		}
+		& ##{$prefix}show-menu:checked + .#{$prefix}hamburger {
+			border-radius: 50%;
+			background-color: $color-primary-600;
+
+			& .#{$prefix}hamburger-line {
+				background: transparent;
+
+				&::before,
+				&::after {
+					background: $color-neutral-000;
+				}
+
+				&::before {
+					transform: rotate(-45deg);
+					top: 0;
+				}
+				&::after {
+					transform: rotate(45deg);
+					top: 0;
+				}
+			}
+		}
+		& .#{$prefix}nav {
+			visibility: hidden;
+			position: absolute;
+			right: 0%;
+			top: $size-10;
+			background-color: $color-neutral-200;
+			padding: $size-5 $size-8;
+			min-width: max-content;
+
+			@include mq(medium) {
+				display: flex;
+				position: relative;
+				right: auto;
+				top: auto;
+				background-color: transparent;
+				padding: 0;
+				visibility: visible;
+			}
+		}
+		& ##{$prefix}show-menu:checked ~ .#{$prefix}nav {
+			display: grid;
+			grid-gap: $size-6;
+			visibility: visible;
+			z-index: 999;
+			animation: menushow 600ms ease-in;
+		}
+		@keyframes menushow {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+	}
+}
+/* purgecss end ignore */
