@@ -49,18 +49,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="sg-fixed-theme-toggle">
-				<button id="sg-theme-toggle" class="djne-box-shadow-2" aria-label="Switch to dark theme">
-					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 180 180">
-						<g id="sg-toogle-sun">
-							<path
-								d="M153.64,116.36l26.36-26.36-26.36-26.36V26.36h-37.28L90,0l-26.36,26.36H26.36v37.28L0,90l26.36,26.36v37.28h37.28l26.36,26.36,26.36-26.36h37.28v-37.28ZM90,140c-27.61,0-50-22.39-50-50s22.39-50,50-50,50,22.39,50,50-22.39,50-50,50Z"
-							/>
-						</g>
-						<g id="sg-toggle-circle"><path d="M127.5,90c0,20.71-16.79,37.5-37.5,37.5s-37.5-16.79-37.5-37.5,16.79-37.5,37.5-37.5,37.5,16.79,37.5,37.5Z" /></g>
-					</svg>
-				</button>
-			</div>
 			<div class="sg-content">
 				<div class="sg-section sg-section-hero">
 					<div>
@@ -315,6 +303,14 @@
 					</p>
 					<div class="djne-grid-auto-fit djne-margin-block-8">
 						<div>
+							<p class="djne-fs-400 djne-clr-neutral-400 djne-fw-bold djne-margin-block-end-2">DEFAULT</p>
+							<a href="#" class="djne-button">Learn more</a>
+						</div>
+						<div>
+							<p class="djne-fs-400 djne-clr-neutral-400 djne-fw-bold djne-margin-block-end-2">DEFAULT-OUTLINE</p>
+							<a href="#" class="djne-button" data-type="default-outline">Learn more</a>
+						</div>
+						<div>
 							<p class="djne-fs-400 djne-clr-neutral-400 djne-fw-bold djne-margin-block-end-2">PRIMARY</p>
 							<a href="#" class="djne-button" data-type="primary">Learn more</a>
 						</div>
@@ -363,6 +359,55 @@
 				<section class="sg-section sg-section-divider" id="Forms">
 					<h2 class="djne-clr-neutral-700 djne-fs-600 djne-fw-bold djne-margin-block-end-2">Forms</h2>
 					<p class="djne-clr-neutral-400 djne-margin-block-end-5">Form element styling shown below.</p>
+					<p class="djne-fs-400 djne-clr-neutral-400 djne-fw-bold djne-margin-block-end-2 sg-white-space">
+						<span class="djne-bg-accent-100 djne-clr-accent-700 djne-border-radius-1 djne-margin-inline-1 djne-padding-block-1 djne-padding-inline-2">-contact-form</span>
+						<span class="djne-bg-accent-100 djne-clr-accent-700 djne-border-radius-1 djne-margin-inline-1 djne-padding-block-1 djne-padding-inline-2">.form-group</span>
+					</p>
+					<div class="djne-grid-auto-fit">
+						<div>
+							<form action="POST" class="djne-contact-form djne-flow | djne-margin-block-start-8 djne-padding-5">
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input id="name" type="text" placeholder="Jane Doe" required="" />
+								</div>
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input type="email" placeholder="janedoe@gmail.com" required="" />
+								</div>
+								<div class="form-group">
+									<label for="Phone number">Phone</label>
+									<input type="tel" required="" />
+								</div>
+								<div class="form-group">
+									<label for="date">Date</label>
+									<input id="date" type="date" />
+								</div>
+								<div class="form-group">
+									<label for="Select">Category</label>
+									<select data-name="Category 2" name="Category-2" required="" class="form-dropdown w-select">
+										<option value="">Select one...</option>
+										<option value="Frontend Developer">Frontend Developer</option>
+										<option value="Backend Developer">Backend Developer</option>
+										<option value="Mobile Developer">Mobile Developer</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="message">Message</label>
+									<textarea id="message" type="text" placeholder="Message" rows="4" required=""></textarea>
+								</div>
+								<div>
+									<input type="checkbox" id="checkbox" name="checbox" value="1" />
+									<label for="checbox"> I am a checkbock</label>
+								</div>
+								<div>
+									<input type="radio" id="radio" name="radio" value="1" />
+									<label for="radio"> I am a radio button</label>
+								</div>
+								<button class="djne-button | djne-margin-block-start-8" data-type="accent">Send</button>
+							</form>
+						</div>
+					</div>
 				</section>
 				<section class="sg-section" id="Tabs">
 					<h2 class="djne-clr-neutral-700 djne-fs-600 djne-fw-bold djne-margin-block-end-2">Tabs</h2>
@@ -434,6 +479,18 @@
 					<p>Style Guide Inspired by <a href="http://www.nikolaibain.com" target="_blank">Nikolai Bain</a> - <a href="https://style-guide-statr.webflow.io/" target="_blank">Style Guide</a>.</p>
 				</section>
 			</div>
+		</div>
+		<div class="djne-fixed-theme-toggle">
+			<button id="djne-theme-toggle" class="djne-theme-toggle | djne-box-shadow-2" aria-label="Switch to dark theme">
+				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 180 180">
+					<g id="djne-toogle-sun">
+						<path
+							d="M153.64,116.36l26.36-26.36-26.36-26.36V26.36h-37.28L90,0l-26.36,26.36H26.36v37.28L0,90l26.36,26.36v37.28h37.28l26.36,26.36,26.36-26.36h37.28v-37.28ZM90,140c-27.61,0-50-22.39-50-50s22.39-50,50-50,50,22.39,50,50-22.39,50-50,50Z"
+						/>
+					</g>
+					<g id="djne-toggle-circle"><path d="M127.5,90c0,20.71-16.79,37.5-37.5,37.5s-37.5-16.79-37.5-37.5,16.79-37.5,37.5-37.5,37.5,16.79,37.5,37.5Z" /></g>
+				</svg>
+			</button>
 		</div>
 	</body>
 </html>

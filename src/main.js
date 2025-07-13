@@ -27,9 +27,7 @@ function enableLightTheme() {
 function initializeTheme() {
     // Check if user has a saved preference
     const savedTheme = localStorage.getItem("theme-preference");
-
-    console.log(savedTheme);
-    
+   
     if (savedTheme) {
         // Use saved preference
         savedTheme === "dark" ? enableDarkTheme() : enableLightTheme();

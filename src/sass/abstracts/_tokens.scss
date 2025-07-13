@@ -16,17 +16,16 @@ $color-text-interactive-hover: $color-accent-500;
 // set to 0 to disable
 $letter-spacing-loose: 0;
 
+// Border Radii
 $border-radius-1: $size-2;
 $border-radius-2: $size-4;
+$border-radius-3: $size-8;
 
+// Box Shadows
 $box-shadow-1: 0px $size-2 $size-1 rgb(0, 0, 0, 0.012), 0px $size-6 $size-4 rgb(0, 0, 0, 0.018), 0px $size-13 $size-12 rgb(0, 0, 0, 0.03); // 6 5 22 18 100 80
-
 $box-shadow-2: 0px $size-2 $size-1 rgb(0, 0, 0, 0.016), 0px $size-6 $size-4 rgb(0, 0, 0, 0.024), 0px $size-13 $size-12 rgb(0, 0, 0, 0.04);
-
 $box-shadow-3: 0px $size-2 $size-1 rgb(0, 0, 0, 0.02), 0px $size-6 $size-4 rgb(0, 0, 0, 0.03), 0px $size-13 $size-12 rgb(0, 0, 0, 0.05);
-
 $box-shadow-4: 0px $size-2 $size-1 rgb(0, 0, 0, 0.03), 0px $size-6 $size-4 rgb(0, 0, 0, 0.042), 0px $size-13$size-12 rgb(0, 0, 0, 0.07);
-
 $box-shadow-5: 0px $size-2 $size-1 rgb(0, 0, 0, 0.04), 0px $size-6 $size-4 rgb(0, 0, 0, 0.06), 0px $size-13 $size-12 rgb(0, 0, 0, 0.1);
 
 // Body
@@ -103,15 +102,18 @@ $button-padding-default: $size-3 $size-9; // 12px 32px
 $button-text-decoration: none;
 $button-text-transform: uppercase;
 
-$button-accent-color: $color-neutral-100;
-$button-accent-background: $color-accent-400;
-$button-accent-color-hover: $color-neutral-100;
-$button-accent-background-hover: $color-accent-500;
+$button-default-background: transparent;
+$button-default-background-hover: $color-neutral-100;
 
 $button-primary-color: $color-neutral-100;
 $button-primary-background: $color-primary-700;
 $button-primary-color-hover: $color-neutral-100;
 $button-primary-background-hover: $color-primary-800;
+
+$button-accent-color: $color-neutral-100;
+$button-accent-background: $color-accent-400;
+$button-accent-color-hover: $color-neutral-100;
+$button-accent-background-hover: $color-accent-500;
 
 // Cards
 $card-background-default: $color-primary-100;
@@ -120,7 +122,7 @@ $card-border-radius: $border-radius-2;
 $card-color-default: $body-text-color;
 $card-flow-spacing: $size-2;
 $card-font-family: $body-font-family;
-$card-line-height: 1.25;
+$card-line-height: $body-line-height;
 $card-shadow: $box-shadow-1;
 
 $card-heading-color-default: $card-color-default;
@@ -137,12 +139,12 @@ $form-input-font-family: $body-font-family;
 $form-input-font-weight: $font-weight-semi-bold;
 $form-input-font-size: $body-font-size;
 $form-input-background-color: $color-neutral-100;
-$form-input-border-default: 3px solid $color-primary-200;
-$form-input-border-focus: 3px solid $color-primary-400;
+$form-input-border-default: 1px solid $color-neutral-400;
+$form-input-border-focus: 1px solid $color-primary-400;
 $form-input-border-radius: $border-radius-1;
 $form-input-padding: $size-3;
 
-$form-placeholder-color: $color-primary-300;
+$form-placeholder-color: $color-neutral-400;
 $form-placeholder-font-family: $form-input-font-family;
 $form-placeholder-font-weight: $form-input-font-weight;
 $form-placeholder-font-size: $body-font-size;

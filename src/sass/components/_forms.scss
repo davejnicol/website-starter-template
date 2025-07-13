@@ -2,8 +2,17 @@
 
 .#{$prefix} {
 	&contact-form {
+		display: grid;
+		gap: $size-4 $size-6;
+
 		.form-group {
 			display: grid;
+		}
+
+		& button {
+			grid-column-end: -1;
+			justify-self: start;
+			margin-block-start: $size-4;
 		}
 	}
 }
@@ -13,7 +22,9 @@ label {
 	font-weight: $form-label-font-weight;
 	font-size: $form-label-font-size;
 }
-input:not(.button) {
+input:not(.button),
+select,
+textarea {
 	background-color: $form-input-background-color;
 	border: $form-input-border-default;
 	border-radius: $form-input-border-radius;
@@ -22,9 +33,15 @@ input:not(.button) {
 	font-weight: $form-input-font-weight;
 	padding: $form-input-padding;
 
+	&:focus {
+		border: $form-input-border-focus;
+		outline: $form-input-border-focus;
+	}
+
 	&::placeholder {
 		color: $form-placeholder-color;
-		font-weight: $form-placeholder-font-weight;
 		font-family: $form-placeholder-font-family;
+		font-size: $form-placeholder-font-size;
+		font-weight: $form-placeholder-font-weight;
 	}
 }
