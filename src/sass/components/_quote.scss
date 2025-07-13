@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.#{$prefix} {
+	&quote-block {
+		--padding-inline-size: 2rem;
+
+		border-left: 5px solid $color-accent-700;
+		margin-block: $size-6;
+		padding-inline: var(--padding-inline-size, $size-8);
+
+		&[data-type="testimonial"] {
+			--padding-inline-size: 3.25rem;
+
+			position: relative;
+			border-left: none;
+
+			&::before {
+				content: "\201C";
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: $color-accent-700;
+				font-family: $font-family-accent;
+				font-size: calc($size-4 * 6);
+				transform: translate(0%, -30%);
+			}
+		}
+	}
+}
